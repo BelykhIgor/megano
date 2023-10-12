@@ -1,0 +1,95 @@
+2023-10-11 19:25:04,297 [INFO] django.utils.autoreload: Watching for file changes with StatReloader,
+2023-10-11 19:25:10,142 [INFO] django.request: [36mGET /catalog/[0m,
+2023-10-11 19:25:10,145 [INFO] django.request: [36mGET /catalog/ - 200[0m,
+2023-10-11 19:25:11,036 [INFO] django.request: [36mGET /api/basket/[0m,
+2023-10-11 19:25:11,040 [INFO] django.request: [36mGET /api/basket/ - 200[0m,
+2023-10-11 19:25:11,137 [INFO] django.request: [36mGET /api/tags/[0m,
+2023-10-11 19:25:11,141 [INFO] django.request: [36mGET /api/tags/ - 200[0m,
+2023-10-11 19:25:11,175 [INFO] django.request: [36mGET /api/catalog/?filter[name]=&filter[minPrice]=0&filter[maxPrice]=50000&filter[freeDelivery]=false&filter[available]=true&currentPage=1&sort=price&sortType=inc&limit=20[0m,
+2023-10-11 19:25:11,178 [INFO] django.request: [36mGET /api/catalog/?filter[name]=&filter[minPrice]=0&filter[maxPrice]=50000&filter[freeDelivery]=false&filter[available]=true&currentPage=1&sort=price&sortType=inc&limit=20 - 200[0m,
+2023-10-11 19:25:11,185 [INFO] django.request: [36mGET /api/categories/[0m,
+2023-10-11 19:25:11,188 [INFO] django.request: [36mGET /api/categories/ - 200[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/2/preview_f92bae6e1051391b53a9d7d894213607a84ab54fb27d4bcdf9a991b28d38d6e1.jpg.webp[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/3/preview_5fc1569ac60_aOYStjO.jpg[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/2/preview_3324e080328c7eaccf9446dfc398554f89b50636ce30b61b0ba49a52c1a204bc.jpg[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/3/preview_29e26541d176764.jpg[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/2/preview_210a8b46bc4960afc43f50a1285_dfxHCOV.jpg[0m,
+2023-10-11 19:25:11,200 [INFO] django.request: [36mGET /media/products/1/preview_video_card_XmJLpoZ.png[0m,
+2023-10-11 19:25:11,213 [INFO] django.request: [36mGET /media/products/2/preview_f92bae6e1051391b53a9d7d894213607a84ab54fb27d4bcdf9a991b28d38d6e1.jpg.webp - 304[0m,
+2023-10-11 19:25:11,215 [INFO] django.request: [36mGET /media/products/3/preview_5fc1569ac60_aOYStjO.jpg - 304[0m,
+2023-10-11 19:25:11,215 [INFO] django.request: [36mGET /media/products/2/preview_3324e080328c7eaccf9446dfc398554f89b50636ce30b61b0ba49a52c1a204bc.jpg - 304[0m,
+2023-10-11 19:25:11,221 [INFO] django.request: [36mGET /media/products/3/preview_29e26541d176764.jpg - 304[0m,
+2023-10-11 19:25:11,222 [INFO] django.request: [36mGET /media/products/2/preview_210a8b46bc4960afc43f50a1285_dfxHCOV.jpg - 304[0m,
+2023-10-11 19:25:11,223 [INFO] django.request: [36mGET /media/products/1/preview_video_card_XmJLpoZ.png - 304[0m,
+2023-10-11 19:25:11,238 [INFO] django.request: [36mGET /media/subcategory/subcategory_2/preview_2004611.png[0m,
+2023-10-11 19:25:11,245 [INFO] django.request: [36mGET /media/subcategory/subcategory_1/preview_543316.png[0m,
+2023-10-11 19:25:11,249 [INFO] django.request: [36mGET /media/subcategory/subcategory_3/preview_network-card.png[0m,
+2023-10-11 19:25:11,257 [INFO] django.request: [36mGET /media/subcategory/subcategory_6/preview_2288010.png[0m,
+2023-10-11 19:25:11,260 [INFO] django.request: [36mGET /media/subcategory/subcategory_4/preview_114720.png[0m,
+2023-10-11 19:25:11,266 [INFO] django.request: [36mGET /media/subcategory/subcategory_2/preview_2004611.png - 304[0m,
+2023-10-11 19:25:11,266 [INFO] django.request: [36mGET /media/subcategory/subcategory_1/preview_543316.png - 304[0m,
+2023-10-11 19:25:11,270 [INFO] django.request: [36mGET /media/subcategory/subcategory_3/preview_network-card.png - 304[0m,
+2023-10-11 19:25:11,271 [INFO] django.request: [36mGET /media/subcategory/subcategory_5/preview_834204.png[0m,
+2023-10-11 19:25:11,276 [INFO] django.request: [36mGET /media/subcategory/subcategory_6/preview_2288010.png - 304[0m,
+2023-10-11 19:25:11,278 [INFO] django.request: [36mGET /media/subcategory/subcategory_4/preview_114720.png - 304[0m,
+2023-10-11 19:25:11,308 [INFO] django.request: [36mGET /media/subcategory/subcategory_5/preview_834204.png - 304[0m,
+2023-10-11 19:25:24,821 [INFO] django.request: [36mGET /catalog/1/[0m,
+2023-10-11 19:25:24,821 [INFO] django.request: [36mGET /catalog/1/ - 200[0m,
+2023-10-11 19:25:25,125 [INFO] django.request: [36mGET /api/basket/[0m,
+2023-10-11 19:25:25,130 [INFO] django.request: [36mGET /api/basket/ - 200[0m,
+2023-10-11 19:25:25,222 [INFO] django.request: [36mGET /api/tags/?category=NaN[0m,
+2023-10-11 19:25:25,225 [INFO] django.request: [36mGET /api/tags/?category=NaN - 200[0m,
+2023-10-11 19:25:25,257 [INFO] django.request: [36mGET /api/categories/[0m,
+2023-10-11 19:25:25,262 [INFO] django.request: [36mGET /api/categories/ - 200[0m,
+2023-10-11 19:25:25,526 [ERROR] django.request: Internal Server Error: /api/catalog/,
+Traceback (most recent call last):
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'NaN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\43403\Documents\Megano\mysite\products\views.py", line 86, in get
+    products_queryset = products_queryset.filter(category_id=catalog_num)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\43403\Documents\Megano\venv\lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'NaN'.
+2023-10-11 19:25:25,553 [INFO] django.request: [36mGET /api/catalog/?filter[name]=&filter[minPrice]=0&filter[maxPrice]=50000&filter[freeDelivery]=false&filter[available]=true&currentPage=1&category=NaN&sort=price&sortType=inc&limit=20[0m,
+2023-10-11 19:25:25,553 [ERROR] django.request: [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"', 'Accept': 'application/json, text/plain, */*', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.60', 'Sec-Ch-Ua-Platform': '"Windows"', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://127.0.0.1:8000/catalog/1/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'Cookie': 'csrftoken=cPdDsd5RQTM2hTWXEMGy30AVXIAlxlX6'}[0m,
+2023-10-11 19:25:25,553 [ERROR] django.request: [35mb''[0m,
+2023-10-11 19:25:25,553 [INFO] django.request: [35mGET /api/catalog/?filter[name]=&filter[minPrice]=0&filter[maxPrice]=50000&filter[freeDelivery]=false&filter[available]=true&currentPage=1&category=NaN&sort=price&sortType=inc&limit=20 - 500[0m,
