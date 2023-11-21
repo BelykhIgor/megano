@@ -46,6 +46,12 @@ class SubcategoryImage(models.Model):
 
 class Subcategory(models.Model):
     title = models.CharField(max_length=255)
+    category = models.ForeignKey(
+        'Category',
+        on_delete=models.CASCADE,
+        related_name='subcategories',
+        verbose_name=_('category')
+    )
 
     class Meta:
         ordering = ('pk',)
@@ -73,7 +79,7 @@ class CategoryImage(models.Model):
 
 class Category(models.Model):
     title = models.CharField(max_length=255)
-    subcategories = models.ManyToManyField(Subcategory)
+    # subcategories = models.ManyToManyField(Subcategory)
 
     class Meta:
         ordering = ('pk',)

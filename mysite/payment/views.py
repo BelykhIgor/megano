@@ -1,10 +1,8 @@
-
 from rest_framework.request import Request
 from rest_framework.views import APIView
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
-
 from cart.models import Basket
 
 
@@ -25,7 +23,6 @@ class PaymentView(APIView):
         cvv_code = payment_data['code']
         year = payment_data['year']
         user_name = payment_data['name']
-        print(card_number, 'card_number')
 
         # Проверка валидности платежных данных
         if card_number.isdigit() \
@@ -46,6 +43,10 @@ class PaymentView(APIView):
                                 self.delete_basket(request)
                                 return Response({'Payment was successful'}, status=status.HTTP_200_OK)
         return Response({'Wrong data'}, status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request: Request, **kwargs) -> Response:
+        print('Payment_data', request.GET)
+        print('KWARGS', kwargs)
 
     def delete_basket(self, request):  # Удаляем корзину после оплаты заказа
         user = request.user

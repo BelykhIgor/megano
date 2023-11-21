@@ -22,31 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = getenv(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-23kr#@u&7&w$m8pe2q985d9=f(k#3+q=*k3g$$y66(yhgqfvl5"
-)
+SECRET_KEY = 'asuygrarubgpriuagbpriugbpbhvpwiarvgyf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv("DJANGO_DEBUG", "1") == "1"
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    '0.0.0.0',
-    '127.0.0.1',
-    'localhost',
-
-] + getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
-
-if DEBUG:
-    import socket
-    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-    INTERNAL_IPS.append('10.0.2.2')
-    INTERNAL_IPS.extend(
-        [ip[: ip.rfind('.')] + '.1' for ip in ips]
-    )
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -151,6 +132,9 @@ USE_TZ = True
 
 DEFAULT_CHARSET = 'utf-8'
 
+# LOCALE_PATHS = [
+#     BASE_DIR / 'locale'
+# ]
 
 # APPEND_SLASH = True
 
@@ -159,7 +143,9 @@ DEFAULT_CHARSET = 'utf-8'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static',]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -176,35 +162,20 @@ LOGFILE_COUNT = 3
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s,'
-        }
-    },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            # 'level': 'DEBUG',
-            'formatter': 'verbose',
-            # 'filters': ['require_debug_true'],
-        },
-
-        'logfile': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': LOGFILE_NAME,
-            'maxBytes': LOGFILE_SIZE,
-            'backupCount': LOGFILE_COUNT,
-            'formatter': 'verbose',
         },
     },
-    'root': {
-        'handlers': [
-            'console',
-            'logfile'
-        ],
-        'level': 'DEBUG',
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',  # change debug level as appropiate
+            'propagate': False,
+        },
     },
 }
+
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_COOKIE_NAME = 'basket_session_key'
@@ -221,28 +192,28 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
-LOGLEVEL = getenv("DJANGO-LOGLEVEL", "info").upper()
-
-logging.config.dictConfig({
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'console': {
-            'format': '%(asctime)s %(levelname)s [%(name)s:%(lineno)s] %(module)s %(message),'
-        },
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'console',
-        },
-    },
-    'loggers': {
-        "": {
-            "level": LOGLEVEL,
-            "handlers": [
-                "console",
-            ],
-        },
-    },
-})
+# LOGLEVEL = getenv("DJANGO-LOGLEVEL", "info").upper()
+#
+# logging.config.dictConfig({
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'console': {
+#             'format': '%(asctime)s %(levelname)s [%(name)s:%(lineno)s] %(module)s %(message),'
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'console',
+#         },
+#     },
+#     'loggers': {
+#         "": {
+#             "level": LOGLEVEL,
+#             "handlers": [
+#                 "console",
+#             ],
+#         },
+#     },
+# })

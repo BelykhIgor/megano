@@ -182,9 +182,15 @@ class ProductReviewListView(GenericAPIView):
         except Product.DoesNotExist:
             return Response({"message": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
 
-        serialized = ReviewSerializer(data=request.data)
-        if serialized.is_valid():
-            serialized.validated_data["product"] = product  # Устанавливаем продукт в отзыве
-            review = serialized.save()  # Сохраняем отзыв с установленным продуктом
-            return Response(ReviewSerializer(review).data, status=status.HTTP_201_CREATED)
-        return Response(serialized.errors, status=status.HTTP_400_BAD_REQUEST)
+        # Проверяем, что есть все данные пользователя оставившего отзыв
+        required_keys = ['author', 'email', 'text', 'rate']
+        if all(key in request.data and request.data[key] for key in required_keys):
+            serialized = ReviewSerializer(data=request.data)
+            if serialized.is_valid():
+                serialized.validated_data["product"] = product  # Устанавливаем продукт в отзыве
+                review = serialized.save()  # Сохраняем отзыв с установленным продуктом
+                return Response(ReviewSerializer(review).data, status=status.HTTP_201_CREATED)
+            return Response(serialized.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response('Error data review', status=status.HTTP_400_BAD_REQUEST)
+

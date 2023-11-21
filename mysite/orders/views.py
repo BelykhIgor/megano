@@ -127,25 +127,41 @@ class OrderConfirmView(GenericAPIView):
                     context={'order_count_product': order_product.quantity}
                 )
                 products_data.append(serialized.data)
+            try:
+                user_data = Profile.objects.get(user=user)
 
-            user_data = Profile.objects.get(user=user)
+                data_res = {
+                  "id": order_id,
+                  "createdAt": order.createdAt,
+                  "fullName": user_data.fullName,
+                  "email": user_data.email,
+                  "phone": user_data.phone,
+                  "deliveryType": '',
+                  "paymentType": '',
+                  "totalCost": total_cost,
+                  "status": '',
+                  "city": '',
+                  "address": '',
+                  "products": products_data,
+                }
+                return Response(data_res)
+            except Profile.DoesNotExits:
+                data_res = {
+                    "id": order_id,
+                    "createdAt": order.createdAt,
+                    "fullName": '',
+                    "email": '',
+                    "phone": '',
+                    "deliveryType": '',
+                    "paymentType": '',
+                    "totalCost": total_cost,
+                    "status": '',
+                    "city": '',
+                    "address": '',
+                    "products": products_data,
+                }
+                return Response(data_res)
 
-            data_res = {
-              "id": order_id,
-              "createdAt": order.createdAt,
-              "fullName": user_data.fullName,
-              "email": user_data.email,
-              "phone": user_data.phone,
-              "deliveryType": '',
-              "paymentType": '',
-              "totalCost": total_cost,
-              "status": '',
-              "city": '',
-              "address": '',
-              "products": products_data,
-            }
-
-            return Response(data_res)
         else:
             order_id = kwargs.get('order_id')
             return Response({"id": order_id})

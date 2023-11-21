@@ -38,7 +38,7 @@ class CategoryAdmin(admin.ModelAdmin):
         (None, {
             'fields': (
                 'title',
-                'subcategories',
+                # 'subcategories',
             )
         }),
     )

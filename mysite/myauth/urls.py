@@ -11,10 +11,10 @@ from .views import (
 app_name = 'myauth'
 
 urlpatterns = [
-    path("sign-in/", SignIn.as_view()),
-    path("sign-up/", SignUp.as_view()),
+    path("sign-in", SignIn.as_view()),
+    path("sign-up", SignUp.as_view()),
     path("sign-out", SignOut.as_view()),
-    path("profile/", ProfileUser.as_view()),
-    path("profile/avatar/", AvatarUpdateView.as_view()),
-    path("profile/password/", ProfileUser.as_view()),
+    path("profile", ProfileUser.as_view()),
+    path("profile/avatar", AvatarUpdateView.as_view()),
+    path("profile/password", ProfileUser.as_view()),
 ]

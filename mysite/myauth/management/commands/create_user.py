@@ -1,15 +1,16 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from django.core.management import BaseCommand
 from faker import Faker
 
 
 class Command(BaseCommand):
-
+    """
+    Функция создания тестовых пользователей
+    Имена рандомные
+    Пароль - 123456
+    """
     def handle(self, *args, **kwargs):
-        password = '123456'
-        names = []
-        for name in range(1, 5):
-            fake = Faker()
+        fake = Faker()
+        for _ in range(1, 5):
             random_name = fake.first_name()
-            names.append(User(username=random_name, password=password))
-        User.objects.bulk_create(names)
+            User.objects.create_user(username=random_name, password='123456')
