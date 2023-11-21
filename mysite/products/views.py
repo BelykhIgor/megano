@@ -70,6 +70,7 @@ class CatalogListView(GenericAPIView):  # Список товаров общег
     serializer_class = ProductShortSerializer
 
     def get(self, request: Request,  **kwargs) -> Response:
+        print('CATALOG', request.GET, kwargs)
         name_filter = request.query_params.get('filter[name]')
         min_price = request.query_params.get('filter[minPrice]')
         max_price = request.query_params.get('filter[maxPrice]')

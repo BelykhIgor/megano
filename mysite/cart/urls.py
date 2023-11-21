@@ -5,7 +5,7 @@ from .views import  BasketView
 app_name = 'cart'
 
 urlpatterns = [
-       path("basket/", BasketView.as_view()),
+       path("basket", BasketView.as_view()),
 ]
 
 

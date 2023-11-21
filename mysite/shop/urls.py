@@ -8,8 +8,8 @@ from .views import (
 app_name = 'shop'
 
 urlpatterns = [
-    path("sales", SalesListView.as_view()),
-    path("banners", BannersListView.as_view()),
+    path("sales/", SalesListView.as_view()),
+    path("banners/", BannersListView.as_view()),
 ]
 
 

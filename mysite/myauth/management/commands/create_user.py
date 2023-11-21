@@ -4,9 +4,7 @@ from faker import Faker
 
 
 class Command(BaseCommand):
-    """
-    Функция для создания тестовых пользователей с простым паролем и случайными именами.
-    """
+
     def handle(self, *args, **kwargs):
         password = '123456'
         names = []
